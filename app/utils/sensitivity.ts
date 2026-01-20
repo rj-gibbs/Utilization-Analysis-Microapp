@@ -1,0 +1,1 @@
+export const defaultSensitivity = { leakage: 0, seasonality: 1, rateAdj: 1 };
