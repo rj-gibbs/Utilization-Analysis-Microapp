@@ -11,6 +11,12 @@ export const PDFExportButton = () => {
     pdf.save("utilization-impact.pdf");
   };
   return (
-    <button onClick={downloadPDF} className="mt-4 px-4 py-2 bg-brand-blue text-white rounded-lg">Export as PDF</button>
+    
+<button
+  onClick={downloadPDF}
+  className="mt-4 px-4 py-2 bg-brand-primary text-white rounded-lg hover:bg-brand-primaryDark transition"
+>
+  Export as PDF
+</button>
   );
 };
