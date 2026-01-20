@@ -16,18 +16,21 @@ export default function Home() {
   const scenarios = calcScenarioImpact(inputs, defaultSensitivity);
 
   return (
-    <main className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-extrabold text-brand-pink mb-8">Utilization Impact Calculator 🎉</h1>
-      <div className="bg-white rounded-2xl shadow p-6">
-        <Slider label="Billable FTEs" value={fte} min={1000} max={20000} step={100} onChange={setFte} />
-        <Slider label="Avg Rate ($)" value={rate} min={100} max={500} step={10} onChange={setRate} />
-        <Slider label="Current Utilization (%)" value={util} min={70} max={100} step={0.5} onChange={setUtil} />
-        <Slider label="Discount (%)" value={discount} min={70} max={100} step={1} onChange={setDiscount} />
-      </div>
-      <div className="mt-6">
-        <ResultsCharts scenarios={scenarios} />
-      </div>
-      <PDFExportButton />
-    </main>
+    
+<main className="p-6 md:p-10 max-w-4xl mx-auto">
+  <h1 className="text-2xl md:text-3xl font-extrabold text-brand-primary mb-6">
+    Utilization Impact Calculator
+  </h1>
+
+  <div className="bg-white rounded-2xl shadow border border-brand.panelBorder p-6">
+    {/* sliders */}
+  </div>
+
+  <div className="mt-6">
+    <ResultsCharts scenarios={scenarios} />
+  </div>
+
+  <PDFExportButton />
+</main>
   );
 }
